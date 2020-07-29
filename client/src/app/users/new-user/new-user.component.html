@@ -1,0 +1,83 @@
+<div class="leading-loose">
+  <form
+    class="max-w-xl m-4 p-10 bg-gray-200 rounded shadow-xl"
+    [formGroup]="createUserForm"
+  >
+    <p class="text-gray-800 font-medium">Informacion de usuario:</p>
+    <div class="mt-2">
+      <label class="block text-sm">Nombre:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="name"
+        type="text"
+        placeholder="Nombre"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Apellido:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="lastname"
+        type="text"
+        placeholder="Apellido"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Edad:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="age"
+        type="number"
+        placeholder="Edad"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Email:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="email"
+        type="email"
+        placeholder="Email"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Contraseña:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="password"
+        type="password"
+        placeholder="Contraseña"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Confirmar contraseña:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="confirmPassword"
+        type="password"
+        placeholder="Confirmar Contraseña"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Foto de perfil:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        type="file"
+        formControlName="profile_pic"
+        #userpic
+        (change)="sendFile($event)"
+        placeholder="Foto"
+      />
+      <img src="{{ seeFile }}" />
+    </div>
+    <div class="mt-4">
+      <button
+        class="px-4 py-1 text-white font-light tracking-wider bg-orange-500 rounded"
+        type="submit"
+        (click)="registerUser()"
+      >
+       Guardar
+      </button>
+    </div>
+  </form>
+</div>

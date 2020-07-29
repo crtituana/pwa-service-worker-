@@ -1,0 +1,53 @@
+<div class="leading-loose">
+  <form
+    class="max-w-xl m-4 p-10 bg-gray200 rounded shadow-xl"
+    [formGroup]="editCourseForm"
+  >
+    <p class="text-white-800 font-medium">Informacion del curso:</p>
+    <div class="mt-2">
+      <label class="block text-sm">Titulo:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="title"
+        type="text"
+        placeholder="Titulo"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Profesor:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="professor"
+        type="text"
+        placeholder="Nombre profesor"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Descripcion:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="description"
+        type="text"
+        placeholder="Descripcion"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Tema:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="topic"
+        type="text"
+        placeholder="Tema"
+      />
+    </div>
+    <div class="mt-4">
+      <button
+        class="px-4 py-1 text-white font-light tracking-wider bg-grren-500 rounded"
+        type="submit"
+        (click)="update()"
+      >
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>

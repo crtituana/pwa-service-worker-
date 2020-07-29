@@ -1,0 +1,35 @@
+<div class="leading-loose">
+  <form
+    class="max-w-xl m-4 p-10 bg-gray-200 rounded shadow-xl"
+    [formGroup]="createRoleForm"
+  >
+    <p class="text-gray-800 font-medium">Rol Informativo:</p>
+    <div class="mt-2">
+      <label class="block text-sm">Nombre:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="name"
+        type="text"
+        placeholder="Nombre"
+      />
+    </div>
+    <div class="mt-2">
+      <label class="block text-sm">Descripcion:</label>
+      <input
+        class="w-full px-5 py-1 text-black-700 bg-white-200 rounded"
+        formControlName="description"
+        type="text"
+        placeholder="Descripcion"
+      />
+    </div>
+    <div class="mt-4">
+      <button
+        class="px-4 py-1 text-white font-light tracking-wider bg-green-500 rounded"
+        type="submit"
+        (click)="registerRole()"
+      >
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>
